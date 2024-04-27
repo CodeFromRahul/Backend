@@ -1,5 +1,16 @@
-import mongoose from "mongoose"
-import { DB_NAME } from "./constants";
+// require(dotenv).config({path:'./env'})
+
+import dotevn from "dotenv"
+
+import connectDB from "./db/index.js";
+
+dotevn.config({path:'./env'})
+
+
+connectDB()
+
+//  we can use this aproach to connect to db
+/*
 
 import express from "express"
 const app = express();
@@ -23,3 +34,4 @@ app.listen(process.env.PORT,()=>{
         console.error("Your error",error)
     }
 })()
+*/
